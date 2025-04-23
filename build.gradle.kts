@@ -13,7 +13,7 @@ val ktorVersion = "2.3.10"
 
 dependencies {
     // Telegram Bot
-    implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:6.3.0")
+    implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:6.0.7")
 
     // Ktor Server
     implementation("io.ktor:ktor-server-core:$ktorVersion")
