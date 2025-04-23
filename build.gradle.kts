@@ -25,3 +25,14 @@ dependencies {
 application {
     mainClass.set("com.example.telegrambotv2.MainKt")
 }
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.example.telegrambotv2.MainKt"
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from(
+        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
+    )
+}
